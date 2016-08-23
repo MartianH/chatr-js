@@ -1,0 +1,12 @@
+<template name="login">
+    <div id="feature-cont">
+        <img src="fb-bubble.png" height="200">
+            <h1>Chat with your friends!</h1>
+            <h2>No sign-up required!</h2>
+        {{#if currentUser}}
+            <button id="logout" class="fb-btn btn-default">Logout</button>
+        {{else}}
+            <button id="facebook-login" class="fb-btn btn-default"> Login with Facebook</button>
+        {{/if}}
+    </div>
+</template>

@@ -1,0 +1,29 @@
+
+
+
+<template name="channelList">
+  <h1>channels: </h1>
+</template>
+
+<template name="chat">
+    {{> input }}
+    {{> messages }}
+</template>
+
+<template name="messages">
+  {{#each messages}}
+    <div class='single-msg'>
+      <img id='prof-img' src="{{profileImage}}" height="30">
+      <strong class='msg-name'>{{name}}:</strong>
+      <p class='msg-text'>{{#markdown}}{{message}}{{/markdown}}</p><br>
+    </div>
+  {{/each}}
+</template>
+
+<template name="input">
+  <div id="input-bar">
+    <img src="speech-bubble.png" height="20">
+    <input type="text" id="message" size=20 autocorrect=off placeholder="Write something interesting and press ENTER !">
+  </div>
+</template>
+
