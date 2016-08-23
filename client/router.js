@@ -1,6 +1,11 @@
 FlowRouter.route('/', {
   action: function() {
-    BlazeLayout.render("mainLayout", {content: "channelList"});
+    if (Meteor.userId()) {
+    	FlowRouter.go('/chat');
+    }
+    else {
+    	FlowRouter.go('/login');
+    }
   }
 });
 
